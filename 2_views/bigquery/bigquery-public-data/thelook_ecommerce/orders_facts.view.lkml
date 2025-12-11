@@ -1,4 +1,4 @@
-include: "/3_explores/thelook_ecommerce/thelook_ecommerce.explore.lkml"
+include: "/3_explores/thelook_ecommerce/order_items.explore.lkml"
 
 view: orders_facts {
 

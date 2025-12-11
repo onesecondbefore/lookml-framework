@@ -3,6 +3,7 @@ include: "/2_views/bigquery/bigquery-public-data/thelook_ecommerce/*.view.lkml"
 explore: order_items {
   label: "Order Insights"
   view_name: order_items
+  extension: required # required, or error
 
   # join: order_facts {
   #   type: left_outer

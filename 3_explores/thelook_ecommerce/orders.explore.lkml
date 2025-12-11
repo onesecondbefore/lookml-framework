@@ -3,6 +3,7 @@ include: "/2_views/bigquery/bigquery-public-data/thelook_ecommerce/*.view.lkml"
 explore: orders {
   label: "Orders"
   view_name: orders
+  extension: required # required, or error
 
   join: order_items {
     type: left_outer
@@ -17,6 +18,11 @@ explore: orders {
     type: full_outer
     relationship: one_to_one
     sql_on: ${inventory_items.id} = ${order_items.inventory_item_id} ;;
+  }
+  join: distribution_centers {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${inventory_items.product_distribution_center_id}=${distribution_centers.id} ;;
   }
   join: users {
     view_label: "Users"

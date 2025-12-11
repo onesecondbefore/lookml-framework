@@ -1,6 +1,6 @@
 view: inventory_items {
   sql_table_name: `bigquery-public-data.thelook_ecommerce.inventory_items` ;;
-  drill_fields: [id]
+  extension: required
 
   dimension: id {
     primary_key: yes

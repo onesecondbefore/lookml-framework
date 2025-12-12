@@ -3,7 +3,7 @@ include: "/2_views/bigquery/bigquery-public-data/thelook_ecommerce/*.view.lkml"
 explore: order_items {
   label: "Order Insights"
   view_name: order_items
-  extension: required # required, or error
+  # extension: required
 
   # join: order_facts {
   #   type: left_outer
@@ -12,13 +12,6 @@ explore: order_items {
   #   sql_on: ${order_facts.order_id} = ${order_items.order_id} ;;
   # }
 
-  join: inventory_items {
-    view_label: "Inventory Items"
-    #Left Join only brings in items that have been sold as order_item
-    type: full_outer
-    relationship: one_to_one
-    sql_on: ${inventory_items.id} = ${order_items.inventory_item_id} ;;
-  }
   join: users {
     view_label: "Users"
     type: left_outer
@@ -32,11 +25,11 @@ explore: order_items {
     sql_on:  ${users.id}=${events.user_id};;
   }
 
-  join: products {
-    view_label: "Products"
-    type: left_outer
-    relationship: many_to_one
-    sql_on: ${products.id} = ${inventory_items.product_id} ;;
-  }
+  # join: products {
+  #   view_label: "Products"
+  #   type: left_outer
+  #   relationship: many_to_one
+  #   sql_on: ${products.id} = ${inventory_items.product_id} ;;
+  # }
 
 }

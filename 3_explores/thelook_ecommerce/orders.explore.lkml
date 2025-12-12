@@ -2,7 +2,6 @@ include: "/2_views/bigquery/bigquery-public-data/thelook_ecommerce/*.view.lkml"
 
 
 explore: orders {
-  label: "Order Insights"
 
   join: order_items {
     view_label: "Order Items"

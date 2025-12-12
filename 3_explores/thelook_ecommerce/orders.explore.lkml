@@ -45,3 +45,8 @@ explore: orders {
   }
 
 }
+
+explore: orders_test {
+  from: orders
+  label: "Orders (Test)"
+}

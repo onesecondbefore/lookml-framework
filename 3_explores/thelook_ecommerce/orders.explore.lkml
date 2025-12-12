@@ -22,6 +22,12 @@ explore: orders {
     relationship: one_to_many
     sql_on: ${order_items.inventory_item_id}=${inventory_items.id} ;;
   }
+  join: distribution_centers {
+    view_label: "Distribution Centers"
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${inventory_items.product_distribution_center_id}=${distribution_centers.id} ;;
+  }
   join: products {
     view_label: "Products"
     type: left_outer
@@ -35,11 +41,5 @@ explore: orders {
     sql_on:  ${users.id}=${events.user_id};;
   }
 
-  # join: products {
-  #   view_label: "Products"
-  #   type: left_outer
-  #   relationship: many_to_one
-  #   sql_on: ${products.id} = ${inventory_items.product_id} ;;
-  # }
 
 }

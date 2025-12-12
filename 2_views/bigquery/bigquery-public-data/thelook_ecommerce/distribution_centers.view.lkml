@@ -5,4 +5,8 @@ include: "/1_sources/bigquery/bigquery-public-data/thelook_ecommerce/distributio
 view: +distribution_centers {
   final: yes
   view_label: "Distribution Centers"
+
+  measure: count {
+    hidden: yes
+  }
 }

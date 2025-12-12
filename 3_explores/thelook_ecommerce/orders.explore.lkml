@@ -3,14 +3,6 @@ include: "/2_views/bigquery/bigquery-public-data/thelook_ecommerce/*.view.lkml"
 
 explore: orders {
   label: "Order Insights"
-  # extension: required
-
-  # join: order_facts {
-  #   type: left_outer
-  #   view_label: "Order Items"
-  #   relationship: many_to_one
-  #   sql_on: ${order_facts.order_id} = ${order_items.order_id} ;;
-  # }
 
   join: order_items {
     view_label: "Order Items"

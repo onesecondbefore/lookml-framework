@@ -1,6 +1,5 @@
 view: inventory_items {
   sql_table_name: `bigquery-public-data.thelook_ecommerce.inventory_items` ;;
-  extension: required
 
   dimension: id {
     primary_key: yes
@@ -54,8 +53,5 @@ view: inventory_items {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.sold_at ;;
   }
-  measure: count {
-    type: count
-    drill_fields: [id, product_name, products.name, products.id, order_items.count]
-  }
+
 }

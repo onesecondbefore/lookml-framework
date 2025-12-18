@@ -41,6 +41,6 @@ view: products {
   }
   measure: count {
     type: count
-    drill_fields: [id, name, inventory_items.count, order_items.count]
+    drill_fields: [id, name]
   }
 }

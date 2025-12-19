@@ -9,10 +9,11 @@ The framework focuses on the following items:
 - Flexible enough to apply this to different development models
 
 # Folders
-1. 1_sources = contains the database table views that are created by Looker (with Create View from Table)
-2. 2_views = refinements of the views under 1_sources. Must keep the exact same folder structure as under 1_sources. Can contain non-existing database elements, like persistent-derived tables.
-3. 3_explores = holds all the joins between the views. You can only include LookML files from 2_views. LookML file name must be suffixed with .explore.lkml. 1 explore per file, or 1 explore file holds the same view joins, but with different base tables.
-4. 4_models = contains refinements and extensions of the explores and the connection to the database.
+1. `1_sources`: contains the database table views that are created by Looker (with Create View from Table)
+2. `2_views`: refinements of the views under `1_sources`. Must keep the exact same folder structure as under `1_sources`. Can contain non-existing database elements, like persistent-derived tables.
+3. `3_explores`: holds all the joins between the views. You can only include LookML files from `2_views`. LookML file name must be suffixed with .explore.lkml. 1 explore per file, or 1 explore file holds the same view joins, but with different base tables.
+4. `4_models`: contains refinements and extensions of the explores and the connection to the database.
+5. `5_tests`: Contains the CI/CD tests when committing code to the main branch
 
 # Sub-folder structure
 Depending on your way of working this setup can be different.

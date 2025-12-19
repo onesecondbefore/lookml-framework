@@ -6,6 +6,14 @@ view: +distribution_centers {
   final: yes
   view_label: "Distribution Centers"
 
+  dimension: latitude {
+    description: "Latitude of the distribution center"
+  }
+
+  dimension: longitude {
+    description: "Longitude of the distribution center"
+  }
+
   measure: count {
     hidden: yes
   }

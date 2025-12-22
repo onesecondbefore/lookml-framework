@@ -20,11 +20,11 @@ Depending on your way of working this setup can be different.
 
 In most cases the folder structure below is sufficient:
 
-<database> / <database name or project id> / <schema name or dataset> / <view name>.view.lkml
+`<database> / <database name or project id> / <schema name or dataset> / <view name>.view.lkml`
 
 You should test the folder structure structure on how likely it is that you will have a chance on duplicates of LookML views. If, for example, you work with Developent/Test/Acceptance/Production databases, where the database name (or project id) is a different one per environment, but the schema and view names are exactly the same on all different environments (production/acceptance/testing/development) you can leave it out. You folder structure would then look like:
 
-<database> / <schema name or dataset> / <view name>.view.lkml
+`<database> / <schema name or dataset> / <view name>.view.lkml`
 
 ## Versions
 * V3 - December, 2025

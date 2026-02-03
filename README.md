@@ -9,22 +9,23 @@ The framework focuses on the following items:
 - Flexible enough to apply this to different development models
 
 # Folders
-1. `1_sources`: contains the database table views that are created by Looker (with Create View from Table)
-2. `2_views`: refinements of the views under `1_sources`. Must keep the exact same folder structure as under `1_sources`. Can contain non-existing database elements, like persistent-derived tables.
+1. [`1_sources`](#1_sources-and-2_views): contains the database table views that are created by Looker (with Create View from Table)
+2. [`2_views`](#1_sources-and-2_views): refinements of the views under `1_sources`. Must keep the exact same folder structure as under `1_sources`. Can contain non-existing database elements, like persistent-derived tables.
 3. `3_explores`: holds all the joins between the views. You can only include LookML files from `2_views`. LookML file name must be suffixed with .explore.lkml. 1 explore per file, or 1 explore file holds the same view joins, but with different base tables.
 4. `4_models`: contains refinements and extensions of the explores and the connection to the database.
 5. `5_tests`: Contains the CI/CD tests when committing code to the main branch
 
-# Sub-folder structure
+# Folder structures
+## `1_sources` and `2_views`
 Depending on your way of working this setup can be different.
 
 In most cases the folder structure below is sufficient:
 
-`<database> / <database name or project id> / <schema name or dataset> / <view name>.view.lkml`
+`<database type> / <database name or project id> / <schema name or dataset> / <view name>.view.lkml`
 
 You should test the folder structure structure on how likely it is that you will have a chance on duplicates of LookML views. If, for example, you work with Developent/Test/Acceptance/Production databases, where the database name (or project id) is a different one per environment, but the schema and view names are exactly the same on all different environments (production/acceptance/testing/development) you can leave it out. You folder structure would then look like:
 
-`<database> / <schema name or dataset> / <view name>.view.lkml`
+`<database type> / <schema name or dataset> / <view name>.view.lkml`
 
 ## Versions
 * V3 - December, 2025

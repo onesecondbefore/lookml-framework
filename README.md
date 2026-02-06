@@ -9,6 +9,7 @@ The framework focuses on the following items:
 - Flexible enough to apply this to different development models
 
 # Folders
+1. [`0_library`](#0_library): contains all supporting files like TopoJSON or localization files. Use logical subdirectory structure. 
 1. [`1_sources`](#1_sources-and-2_views): contains the database table views that are created by Looker (with Create View from Table)
 2. [`2_views`](#1_sources-and-2_views): refinements of the views under `1_sources`. Must keep the exact same folder structure as under `1_sources`. Can contain non-existing database elements, like persistent-derived tables.
 3. [`3_explores`](#3_explores): holds all the joins between the views. You can only include LookML files from `2_views`. LookML file name must be suffixed with .explore.lkml. 1 explore per file, or 1 explore file holds the same view joins, but with different base tables.
@@ -16,6 +17,9 @@ The framework focuses on the following items:
 5. [`5_tests`](#5_tests): Contains the CI/CD tests when committing code to the main branch
 
 # Folder structures
+## `0_library`
+Looker supports many extra files for e.g. localization or TopoJSON files. Organize and structure your folders in a logical way
+
 ## `1_sources` and `2_views`
 Depending on your way of working this setup can be different.
 

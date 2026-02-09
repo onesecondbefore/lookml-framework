@@ -50,4 +50,5 @@ In these files, you'll add all the CI/CD tests for Looker.
 `<logical test folder name> / <test collection name>.test.lkml`
 
 # Versions
+* V4 - February, 2026
 * V3 - December, 2025

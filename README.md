@@ -1,5 +1,9 @@
 # LookML Framework
 
+## How to use it
+You can read the [INSTALL](INSTALL.md) page on how to use this project as your starting point in a new Looker Project.
+
+
 ## Goals
 The goal of the LookML framework is to deliver a comprehensible, light-weight, easy-to-learn framework on how you can organize your LookML in Looker (Enterprise).
 

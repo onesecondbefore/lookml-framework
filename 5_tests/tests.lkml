@@ -1,13 +1,13 @@
 test: data_exists_in_marketing {
-  explore_source: orders_test {
+  explore_source: orders {
     column: count {
-      field: orders_test.count
+      field: orders.count
     }
     limit: 1
   }
 
   assert: has_data {
     # Must be yesno; fully-qualify the field
-    expression: ${orders_test.count} > 0 ;;
+    expression: ${orders.count} > 0 ;;
   }
 }

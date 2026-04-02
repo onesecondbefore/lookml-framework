@@ -3,6 +3,7 @@
 ## How to use it
 You can read the [INSTALL](INSTALL.md) page on how to use this project as your starting point in a new Looker Project.
 
+This is meant as an addition, not a replacement, of the [Looker Best Practices](https://docs.cloud.google.com/looker/docs/best-practices/best-practices-lookml-dos-and-donts)
 
 ## Goals
 The goal of the LookML framework is to deliver a comprehensible, light-weight, easy-to-learn framework on how you can organize your LookML in Looker (Enterprise).
